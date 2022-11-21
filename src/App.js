@@ -23,10 +23,23 @@ function App({ login }){
     if(!data) return null;
 
       return <div>
-        
+        <h1>{data.name}</h1>
+        <p>{data.info}</p>
+        <p>{"github profile picture"}</p>
+        <p>{data.location}</p>
+        <img alt = {data.login} src = {data.avatar_url}/>
+        <button onClick={printMessage1}>Default</button>;
+        <button onClick={printMessage1}>Default</button>;
+
       </div>
 
 }
 
+function printMessage1(){
+  alert('You have clicked the button1 O_o')
+}
+function printMessage2(){
+  alert('You have clicked the button2 O_o')
+}
 
 export default App;
